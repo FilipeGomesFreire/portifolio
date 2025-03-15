@@ -23,7 +23,7 @@ const Home = () => {
    
    <BoardModal/> 
    
-   {/* Coloque seus outros elementos aqui */}
+   {/* Coloque seus outros elementos aqui não sei oq fazer */}
    
    <TextBanner/>
        </div>
