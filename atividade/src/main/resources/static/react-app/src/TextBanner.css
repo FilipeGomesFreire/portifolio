@@ -1,0 +1,25 @@
+/* src/components/TextBanner.css */
+.text-banner {
+    height: 150px;
+    max-width: 1000px;
+    background-image: url("../public/retanguloText.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow-y: auto; /* Permite rolagem vertical caso o texto ultrapasse a altura */
+}
+
+.banner-text {
+    padding: 10px;
+    height: 150px;
+    max-width: 1000px;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: bold;
+    
+}

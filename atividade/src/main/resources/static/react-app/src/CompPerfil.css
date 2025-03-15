@@ -1,0 +1,43 @@
+/* src/components/CompPerfil.css */
+.profile-card-perfil {
+    width: 300px; /* Largura do retângulo */
+    padding: 10px;
+    gap: 20px; 
+    border-radius: 8px; /* Cantos arredondados */
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    align-items: center; /* Centraliza os itens */
+   
+    background-image: url("../public/placaMadeiraVazia.png");
+    background-size: 100% 100%; /* Ajusta a imagem para preencher todo o componente, causando distorção */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center; /* Centraliza a imagem, mas como vai se distorcer, essa parte é opcional */
+    
+}
+
+.profile-image-perfil {
+    
+    width: 200px; /* Largura da imagem redonda */
+    height: 200px; /* Altura da imagem redonda */
+    border-radius: 50%; /* Faz a imagem ser redonda */
+    margin-bottom: 10px; /* Espaçamento entre a imagem e o nome */
+   
+}
+
+.name-perfil {
+    
+    background-color: black; /* Fundo preto */
+    color: white; /* Texto branco */
+    padding: 5px 10px; /* Espaçamento interno do texto */
+    border-radius: 4px; /* Cantos arredondados do fundo do texto */
+    font-family: 'Press Start 2P'; /* Fonte de pixel art */
+    font-size: 26px; /* Tamanho da fonte */
+    margin-bottom: 5px; /* Espaçamento abaixo do nome */
+}
+
+.info-perfil {
+    color: #333; /* Cor normal para as informações adicionais */
+    font-size: 15px; /* Tamanho da fonte para informações adicionais */
+    font-weight: bold;
+    margin: -2px 0; /* Espaçamento entre as informações */
+}

@@ -1,0 +1,48 @@
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    padding: 0px;
+  
+    border-radius: 8px;
+    min-width: 200px;
+    background-image: url("../public/retangulo.png");
+    background-size: 100% 100%; /* Ajusta a imagem para preencher todo o componente, causando distorção */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center; /* Centraliza a imagem, mas como vai se distorcer, essa parte é opcional */
+    
+  }
+  
+  .profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .profile-name {
+    margin: 0;
+    font-size: 0.8em;
+  }
+  
+  .progress-bar {
+    width: 90%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 2px;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: #6200ea;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+  }
+  

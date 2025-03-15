@@ -1,0 +1,44 @@
+body {
+  background-color: black;
+  margin: 0; /* Remove margens do body */
+  background-image: url("../public/bodyBackgrond.jpg");
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Empilha as linhas verticalmente */
+  padding: 20px; /* Adiciona espaçamento ao redor do conteúdo */
+  height: 600px; /* Define uma altura fixa para a container */
+  width: 100%; /* Ocupa toda a largura disponível */
+  overflow-y: auto; /* Permite que a página role caso o conteúdo ultrapasse a altura definida */
+  
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row; /* Mantém as colunas em linha */
+  gap: 20px; /* Espaçamento entre colunas */
+  width: 100%; /* Assegura que a linha ocupe toda a largura disponível */
+}
+
+.column {
+  display: flex;
+  flex-direction: column; /* Empilha os itens dentro da coluna verticalmente */
+  align-items: flex-start; /* Alinha itens à esquerda */
+  gap: 10px; /* Espaçamento entre itens */
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1; /* Permite que as colunas cresçam igualmente */
+  min-width: 150px; /* Largura mínima para as colunas */
+}
+
+.item {
+  background-color: #6200ea;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-align: center;
+  width: 100%; /* Largura total do item */
+}

@@ -1,0 +1,21 @@
+.placa-escrita {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 250px; /* Defina a largura desejada */
+    height: 50px; /* Defina a altura desejada */
+    background-image: url("../public/placaEscrita.png");
+    background-size: cover; /* Cobre todo o componente */
+    background-position: center; /* Centraliza a imagem */
+    position: relative; /* Necessário para o posicionamento do texto */
+    
+  }
+  
+  .placa-texto {
+    
+    color: white; /* Cor do texto */
+    font-size: 24px; /* Tamanho do texto, ajuste conforme necessário */
+    text-shadow: 2px 2px 4px black; /* Sombreado preto */
+    text-align: center; /* Centraliza o texto */
+  }
+  

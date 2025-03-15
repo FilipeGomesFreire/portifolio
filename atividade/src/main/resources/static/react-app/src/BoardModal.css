@@ -1,0 +1,129 @@
+/* Botão principal */
+.open-modal-btn {
+    width: 100px;
+    height: 100px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  /* Estilização do modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    height: 80%;
+    overflow-y: auto;
+  }
+  
+  /* Botão de fechar */
+  .close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  /* Tabuleiro e células */
+  .big-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .small-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  
+  .cell {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+  }
+  
+  .button {
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .botaoAtaque{
+    width: 100px;
+    height: 100px;
+    
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .imgbotaoAtaque{
+    width: 100%;
+    height: 100%;
+    
+  }
+
+
+  .imgEnemy{
+    width: 100px;
+    height: 100px;
+  }
+
+  .imgGifEnemy {
+    position: relative;
+    left: 90px;
+    width: 120px;
+    height: 120px;
+  
+  }
+
+  
+  .imgPlayer {
+ 
+    width: 100px;
+    height: 100px;
+    transform: scaleX(-1);
+    
+  }
+  
+  .imgGifPlayer {
+    position: relative;
+    left: -90px;
+    width: 120px;
+    height: 120px;
+  
+  }
+  
+
+
+
+  

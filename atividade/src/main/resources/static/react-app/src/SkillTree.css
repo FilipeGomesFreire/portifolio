@@ -1,0 +1,26 @@
+.hard-skill-tree {
+  height: 496px;
+  width: 300px;
+  display: flex;
+  flex-direction: column; /* Alternativamente, flex-direction: row para alinhar em linha */
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-image: url("../public/placaPapelVazio.png");
+  background-size: 100% 100%; /* Ajusta a imagem para preencher todo o componente, causando distorção */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  background-position: center; /* Centraliza a imagem, mas como vai se distorcer, essa parte é opcional */
+  overflow-y: auto;
+}
+
+.placa-escrita{
+  position: absolute;
+  top: -10px;
+}
+
+.skills-list {
+  max-height: 363px;
+  overflow-y: auto;
+  width: 100%;
+  padding: 15px;
+}
