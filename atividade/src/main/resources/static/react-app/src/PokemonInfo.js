@@ -4,14 +4,18 @@ import axios from 'axios';
 const PokemonInfo = () => {
   const [id, setId] = useState('');
   const [pokemon, setPokemon] = useState(null);
+  const [loading, setLoading] = useState(false); // ⬅️ Novo state
 
   const fetchPokemon = async () => {
     try {
+      setLoading(true); // ⬅️ Ativa loading
       const res = await axios.get(`https://portifolio-3exr.onrender.com/info/${id}`);
       setPokemon(res.data);
     } catch (err) {
       alert('Pokémon não encontrado!');
       setPokemon(null);
+    } finally {
+      setLoading(false); // ⬅️ Desativa loading (mesmo se der erro)
     }
   };
 
@@ -24,9 +28,13 @@ const PokemonInfo = () => {
         value={id}
         onChange={(e) => setId(e.target.value)}
       />
-      <button onClick={fetchPokemon}>Buscar</button>
+      <button onClick={fetchPokemon} disabled={loading}> {/* ⬅️ Desabilita botão durante loading */}
+        {loading ? 'Carregando...' : 'Buscar'} {/* ⬅️ Altera texto */}
+      </button>
 
-      {pokemon && (
+      {loading && <p>Por favor aguarde... (o backend pode levar até 30s para "acordar")</p>} {/* ⬅️ Mensagem */}
+
+      {pokemon && !loading && ( // ⬅️ Só mostra se tiver dados e não estiver loading
         <div style={{ marginTop: '20px' }}>
           <h3>{pokemon.name}</h3>
           <img src={pokemon.imageUrl} alt={pokemon.name} />
