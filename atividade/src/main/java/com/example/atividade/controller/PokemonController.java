@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-@CrossOrigin(origins = {"https://seu-frontend-react.onrender.com", "http://localhost:3000"})
+@CrossOrigin(origins = {"https://portifolio-3exr.onrender.com", "http://localhost:3000"})
 @RestController
 @RequestMapping("/info")
 
