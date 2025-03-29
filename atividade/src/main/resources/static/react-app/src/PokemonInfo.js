@@ -35,7 +35,7 @@ const PokemonInfo = () => {
 
   return (
     <div style={{ textAlign: 'center' }}>
-      <h2>Buscar Pokémon</h2>
+      <h2>Buscar Pokémon..</h2>
       <input
         type="number"
         placeholder="Digite o número do Pokémon"
