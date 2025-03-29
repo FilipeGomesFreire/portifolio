@@ -13,3 +13,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 no controller
 
+codigo pra pegar tudo q ta na build e jogar na static correta 
+
+
