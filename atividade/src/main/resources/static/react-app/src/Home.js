@@ -5,7 +5,7 @@ import HardSkillTree from "./HardSkillTree";
 import CompPerfil from './CompPerfil';
 import TextBanner from './TextBanner';
 import BoardModal from './BoardModal';
-
+import PokemonInfo from './PokemonInfo';
 
 const Home = () => {
    return (
@@ -26,6 +26,7 @@ const Home = () => {
    {/* Coloque seus outros elementos aqui */}
    
    <TextBanner/>
+   <PokemonInfo />
        </div>
        
      </div>
