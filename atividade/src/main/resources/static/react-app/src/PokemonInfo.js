@@ -8,14 +8,18 @@ const PokemonInfo = () => {
 
   const fetchPokemon = async () => {
     try {
-      setLoading(true); // ⬅️ Ativa loading
-      const res = await axios.get(`https://portifolio-3exr.onrender.com/info/${id}`);
+      setLoading(true);
+      const res = await axios.get(`https://portifolio-3exr.onrender.com/info/${id}`, {
+        timeout: 30000 // ⬅️ 30 segundos (tempo máximo do Render free)
+      });
       setPokemon(res.data);
     } catch (err) {
-      alert('Pokémon não encontrado!');
+      alert(err.message.includes('timeout') 
+        ? 'O servidor está acordando... tente novamente em 20 segundos!' 
+        : 'Pokémon não encontrado!');
       setPokemon(null);
     } finally {
-      setLoading(false); // ⬅️ Desativa loading (mesmo se der erro)
+      setLoading(false);
     }
   };
 
