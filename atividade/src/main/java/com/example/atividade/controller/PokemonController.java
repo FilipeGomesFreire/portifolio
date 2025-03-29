@@ -14,51 +14,32 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 public class PokemonController {
 
-    // @GetMapping("/{id}")
-    // public ResponseEntity<PokemonResponse> getPokemonInfo(@PathVariable String id) {
-    //     String url = "https://pokeapi.co/api/v2/pokemon-form/" + id;
-        
-    //     RestTemplate restTemplate = new RestTemplate();
-    //     PokeApiResponse response = restTemplate.getForObject(url, PokeApiResponse.class);
-        
-    //     if (response == null) {
-    //         return ResponseEntity.notFound().build();
-    //     }
-        
-    //     // Extrair os tipos
-    //     List<String> types = new ArrayList<>();
-    //     for (PokeApiType type : response.getTypes()) {
-    //         types.add(type.getType().getName());
-    //     }
-        
-    //     // Construir a resposta simplificada
-    //     PokemonResponse pokemonResponse = new PokemonResponse();
-    //     pokemonResponse.setName(response.getName());
-    //     pokemonResponse.setImageUrl(response.getSprites().getFront_default());
-    //     pokemonResponse.setTypes(types);
-        
-    //     return ResponseEntity.ok(pokemonResponse);
-    // }
-
-    @GetMapping("/info/{id}")
-@CrossOrigin(origins = {"https://portifolio-3exr.onrender.com", "http://localhost:3000"})
-public ResponseEntity<PokemonResponse> getPokemonInfo(@PathVariable String id) {
-    try {
-        // Configura timeout para a chamada à PokeAPI
-        HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory();
-        factory.setConnectTimeout(5000); // 5 segundos
-        factory.setReadTimeout(5000);
-        
-        RestTemplate restTemplate = new RestTemplate(factory);
-        
+    @GetMapping("/{id}")
+    public ResponseEntity<PokemonResponse> getPokemonInfo(@PathVariable String id) {
         String url = "https://pokeapi.co/api/v2/pokemon-form/" + id;
+        
+        RestTemplate restTemplate = new RestTemplate();
         PokeApiResponse response = restTemplate.getForObject(url, PokeApiResponse.class);
         
-        // ... resto do seu código
-    } catch (ResourceAccessException ex) {
-        return ResponseEntity.status(504).build(); // Gateway Timeout
+        if (response == null) {
+            return ResponseEntity.notFound().build();
+        }
+        
+        // Extrair os tipos
+        List<String> types = new ArrayList<>();
+        for (PokeApiType type : response.getTypes()) {
+            types.add(type.getType().getName());
+        }
+        
+        // Construir a resposta simplificada
+        PokemonResponse pokemonResponse = new PokemonResponse();
+        pokemonResponse.setName(response.getName());
+        pokemonResponse.setImageUrl(response.getSprites().getFront_default());
+        pokemonResponse.setTypes(types);
+        
+        return ResponseEntity.ok(pokemonResponse);
     }
-}
+
     
     // Classes para mapear a resposta da PokeAPI
     private static class PokeApiResponse {
