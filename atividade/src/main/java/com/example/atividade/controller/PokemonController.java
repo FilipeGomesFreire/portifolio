@@ -5,9 +5,13 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.http.ResponseEntity;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+@CrossOrigin(origins = {"https://seu-frontend-react.onrender.com", "http://localhost:3000"})
 @RestController
 @RequestMapping("/info")
+
+
 public class PokemonController {
 
     @GetMapping("/{id}")

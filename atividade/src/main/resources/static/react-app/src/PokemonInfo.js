@@ -7,7 +7,7 @@ const PokemonInfo = () => {
 
   const fetchPokemon = async () => {
     try {
-      const res = await axios.get(`http://localhost:8080/info/${id}`);
+      const res = await axios.get(`https://seu-app-no-render.onrender.com/info/${id}`);
       setPokemon(res.data);
     } catch (err) {
       alert('Pokémon não encontrado!');
